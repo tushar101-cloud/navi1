@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indoor Navigation App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Augmented Reality Indoor Navigation</h1>
+
+        <!-- Navigation Control -->
+        <div id="navigation-controls">
+            <button id="start-navigation">Start Navigation</button>
+            <button id="stop-navigation">Cancel Navigation</button>
+        </div>
+
+        <!-- Display Current Location -->
+        <div id="current-position">
+            <h2>Current Position:</h2>
+            <p id="position"></p>
+        </div>
+
+        <!-- Admin Section -->
+        <div id="admin-login">
+            <h2>Admin Login</h2>
+            <form id="admin-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Add New Location -->
+        <div id="location-form" style="display: none;">
+            <h2>Add Location</h2>
+            <form id="add-location">
+                <label for="location-name">Location Name:</label>
+                <input type="text" id="location-name" name="location-name">
+                <label for="coordinates">Coordinates:</label>
+                <input type="text" id="coordinates" name="coordinates" placeholder="Latitude, Longitude">
+                <button type="submit">Add Location</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+</body>
+</html>
